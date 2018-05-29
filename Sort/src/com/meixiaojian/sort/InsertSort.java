@@ -9,7 +9,7 @@ package com.meixiaojian.sort;
  */
 public class InsertSort {
 
-	public int[] insertSort(int[] arr){
+	public int[] doSort(int[] arr){
 		if(arr==null || arr.length<=1){
 			return arr;
 		}

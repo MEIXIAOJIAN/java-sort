@@ -8,7 +8,7 @@ package com.meixiaojian.sort;
  */
 public class SelectSort {
 
-	public int[] selectSort(int[] arr){
+	public int[] doSort(int[] arr){
 		if(arr==null || arr.length<=1){
 			return arr;
 		}

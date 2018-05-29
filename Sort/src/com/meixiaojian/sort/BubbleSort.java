@@ -9,7 +9,7 @@ package com.meixiaojian.sort;
  */
 public class BubbleSort {
 
-	public int[] bubbleSort(int[] arr){//java中类是指针传递，故此处不设置返回值亦可，但由于需要执行成功状态，故写个返回值
+	public int[] doSort(int[] arr){//java中类是指针传递，故此处不设置返回值亦可，但由于需要执行成功状态，故写个返回值
 		if(arr==null || arr.length<=1){
 			return arr;
 		}
