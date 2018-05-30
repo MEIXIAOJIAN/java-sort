@@ -5,6 +5,7 @@ import java.util.Arrays;
 import com.meixiaojian.sort.BubbleSort;
 import com.meixiaojian.sort.HeapSort;
 import com.meixiaojian.sort.InsertSort;
+import com.meixiaojian.sort.MergeSort;
 import com.meixiaojian.sort.QuickSort;
 import com.meixiaojian.sort.SelectSort;
 import com.meixiaojian.sort.ShellSort;
@@ -19,6 +20,15 @@ public class TestSort {
 		testQuickSortPlus();//测试快速排序-优化
 		testHeapSort();//测试堆排序
 		testShellSort();//测试希尔排序
+		testMergeSort();//测试归并排序
+	}
+	
+	private static void testMergeSort(){//测试归并排序
+		int arr[]={49,38,65,97,76,13,27,49};//{5,3,8,6,4};
+		MergeSort sort = new MergeSort();
+		@SuppressWarnings("unused")
+		int[] result = sort.doSort(arr);//java中类是指针传递，故此处arr的顺序也被调换
+		printArr("测试归并排序结果",arr);
 	}
 	
 	private static void testShellSort(){//测试希尔排序
