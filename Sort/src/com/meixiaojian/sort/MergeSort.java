@@ -10,6 +10,9 @@ package com.meixiaojian.sort;
 public class MergeSort {
 
 	public int[] doSort(int[] arr){
+		if(arr==null || arr.length<=1){
+			return arr;
+		}
 		int[] temp = new int[arr.length];//初始化一个临时数组，避免递归时候重复生成临时数组
 		mergeSort(arr,0,arr.length-1,temp);
 		return arr;

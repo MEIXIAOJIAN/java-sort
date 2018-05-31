@@ -23,6 +23,9 @@ package com.meixiaojian.sort;
 public class CountSort {
 
 	public int[] doSort(int[] arr){
+		if(arr==null || arr.length<=1){
+			return arr;
+		}
 		int[] result = countSort(arr);
 		return result;
 	}
