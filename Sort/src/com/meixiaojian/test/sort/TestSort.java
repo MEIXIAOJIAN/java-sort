@@ -9,6 +9,7 @@ import com.meixiaojian.sort.HeapSort;
 import com.meixiaojian.sort.InsertSort;
 import com.meixiaojian.sort.MergeSort;
 import com.meixiaojian.sort.QuickSort;
+import com.meixiaojian.sort.RadixSort;
 import com.meixiaojian.sort.SelectSort;
 import com.meixiaojian.sort.ShellSort;
 
@@ -26,20 +27,36 @@ public class TestSort {
 		testCountSort();//测试计数排序
 		testBucketSort();//测试计数桶排序
 		testBucketSort2();//测试计数桶排序2
+		testRadixSort();//测试基数排序
+		testRadixSort2();//测试基数排序2
+	}
+	
+	private static void testRadixSort2(){//测试基数排序2
+		int arr[]={49,38,65,97,76,13,27,49};//{1,1,1,4,5};//{49,38,65,97,76,13,27,49};//{5,3,8,6,4};
+		RadixSort sort = new RadixSort();
+		int[] result = sort.radixSort2(arr,2);//java中类是指针传递，故此处arr的顺序也被调换
+		printArr("测试基数排序结果2",result);
+	}
+	
+	private static void testRadixSort(){//测试基数排序
+		int arr[]={49,38,65,97,76,13,27,49};//{1,1,1,4,5};//{49,38,65,97,76,13,27,49};//{5,3,8,6,4};
+		RadixSort sort = new RadixSort();
+		int[] result = sort.doSort(arr);//java中类是指针传递，故此处arr的顺序也被调换
+		printArr("测试基数排序结果",result);
 	}
 	
 	private static void testBucketSort2(){//测试计数桶排序2
 		int arr[]={49,38,65,97,76,13,27,49};//{1,1,1,4,5};//{49,38,65,97,76,13,27,49};//{5,3,8,6,4};
 		BucketSort sort = new BucketSort();
 		int[] result = sort.bucketSort2(arr);//java中类是指针传递，故此处arr的顺序也被调换
-		printArr("测试计数桶排序结果2",result);
+		printArr("测试桶排序结果2",result);
 	}
 	
-	private static void testBucketSort(){//测试计数桶排序
+	private static void testBucketSort(){//测试桶排序
 		int arr[]={49,38,65,97,76,13,27,49};//{1,1,1,4,5};//{49,38,65,97,76,13,27,49};//{5,3,8,6,4};
 		BucketSort sort = new BucketSort();
 		int[] result = sort.doSort(arr);//java中类是指针传递，故此处arr的顺序也被调换
-		printArr("测试计数桶排序结果",result);
+		printArr("测试桶排序结果",result);
 	}
 	
 	private static void testCountSort(){//测试计数排序

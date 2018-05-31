@@ -30,6 +30,7 @@ public class BucketSort {
 		return arr;
 	}
 	
+	//桶排序第一种方法，感觉像是基数排序   ，代码来自百度百科
 	private void bucketSort(int[] arr){
 		int n=arr.length;
 		int[][] bask = new int[10][n];//初始化10个桶
@@ -70,6 +71,7 @@ public class BucketSort {
 		}
 	}
 	
+	//桶排序第二种方法
 	public int[] bucketSort2(int[] arr) {
         if(arr == null || arr.length == 0)
             return arr;
