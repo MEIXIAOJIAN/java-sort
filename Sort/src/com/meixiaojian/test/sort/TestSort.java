@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import com.meixiaojian.sort.BubbleSort;
 import com.meixiaojian.sort.BucketSort;
+import com.meixiaojian.sort.CocktailSort;
 import com.meixiaojian.sort.CountSort;
 import com.meixiaojian.sort.HeapSort;
 import com.meixiaojian.sort.InsertSort;
@@ -29,6 +30,14 @@ public class TestSort {
 		testBucketSort2();//测试计数桶排序2
 		testRadixSort();//测试基数排序
 		testRadixSort2();//测试基数排序2
+		testCocktailSort();//测试鸡尾酒排序
+	}
+	
+	private static void testCocktailSort(){//测试鸡尾酒排序
+		int arr[]={49,38,65,97,76,13,27,49};//{1,1,1,4,5};//{49,38,65,97,76,13,27,49};//{5,3,8,6,4};
+		CocktailSort sort = new CocktailSort();
+		int[] result = sort.doSort(arr);//java中类是指针传递，故此处arr的顺序也被调换
+		printArr("测试鸡尾酒排序结果",result);
 	}
 	
 	private static void testRadixSort2(){//测试基数排序2
